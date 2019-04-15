@@ -15,10 +15,11 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 // ============================
 let urlDB;
 
-// if (process.env.NODE_ENV === 'dev') {
-//    urlDB = 'mongodb://localhost:27017/modelodb';
-//  } else {
-    urlDB = process.env.MONGO_URI;
-//}
+ if (process.env.NODE_ENV === 'dev') {
+    urlDB = 'mongodb://localhost:27017/modelodb';
+ } else {
+    urlDB = 'mongodb+srv://gorkiedu:rcNQruUVdqZKsFlv@cluster0-d2pir.mongodb.net/modelodb';
+    
+}
 process.env.URLDB = urlDB;
 
